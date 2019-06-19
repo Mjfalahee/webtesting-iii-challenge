@@ -30,6 +30,8 @@ describe('<Display />', () => {
         getByText(/open/i);
     })
     it('cannot be closed if it is locked', () => {
+        const { getByTestId } = render(<Display locked={true} />);
+        const open = getByTestId('openClose');
         
     })
     
